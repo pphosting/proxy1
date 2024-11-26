@@ -78,7 +78,7 @@
             const url = document.getElementById('url').value;
             
             // Using a public CORS proxy to fetch the URL
-            const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+            const proxyUrl = `'https://corsproxy.io/?' + ${encodeURIComponent(url)}`;
 
             fetch(proxyUrl)
                 .then(response => {
